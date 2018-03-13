@@ -2,6 +2,23 @@ provider "aws" {
   region     = "us-east-1"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "xpc-aws-labs"
+    key = "terraform/envoi-cantemo-deploy"
+    region = "us-east-1"
+  }
+}
+
+data "terraform_remote_state" "envoi-cantemo-deploy" {
+  backend = "s3"
+  config {
+    bucket = "xpc-aws-labs"
+    key = "terraform/envoi-cantemo-deploy/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
 module "portal" {
   source = "modules/aws-portal-services"
 

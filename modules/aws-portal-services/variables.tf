@@ -149,7 +149,19 @@ variable "vidi_subnet_group_name" {
 }
 
 #Vidispine Amazon MQ
-variable "vidi_broker_name" {}
-variable "vidi_broker_instance_type" {}
-variable "vidi_broker_username" {}
-variable "vidi_broker_password" {}
+variable "vidi_broker_name" {
+  description = "The name of the broker created for Vidispine"
+}
+variable "vidi_broker_instance_type" {
+  description = "The type of instace used for the Vidispine broker"
+}
+variable "vidi_broker_username" {
+  description = "The username for the Vidispine broker"
+}
+variable "vidi_broker_password" {
+  description = "The password for the Vidispine broker"
+}
+variable "vidi_broker_subnet_ids" {
+  description = "A list of subnet ids to be used by Amazon MQ"
+  type = "list"
+}

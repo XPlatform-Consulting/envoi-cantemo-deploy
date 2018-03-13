@@ -19,3 +19,4 @@ variable "broker_password" {
 variable "broker_username" {
 
 }
+variable "broker_subnet_ids" {type = "list"}

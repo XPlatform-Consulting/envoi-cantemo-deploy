@@ -92,4 +92,5 @@ module "aws-amazonmq" {
   broker_security_groups = "${aws_security_group.vidispine_amazonmq.id}"
   broker_username = "${var.vidi_broker_username}"
   broker_password = "${var.vidi_broker_password}"
+  broker_subnet_ids = ["${var.vidi_broker_subnet_ids}"]
 }

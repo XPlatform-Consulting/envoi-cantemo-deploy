@@ -3,6 +3,7 @@ resource "aws_mq_broker" "fmc-vidispine-mq" {
   engine_type = "${var.broker_type}"
   engine_version = "${var.broker_version}"
   host_instance_type = "${var.broker_instace_type}"
+  subnet_ids = ["${var.broker_subnet_ids}"]
   security_groups = ["${var.broker_security_groups}"]
   "user" {
     password = "${var.broker_password}"

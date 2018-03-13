@@ -77,3 +77,7 @@ variable "vidi_broker_username" {
 variable "vidi_broker_password" {
   description = "The password for the Vidispine broker"
 }
+variable "vidi_broker_subnet_ids" {
+  description = "A list of subnet ids to be used by Amazon MQ"
+  type = "list"
+}

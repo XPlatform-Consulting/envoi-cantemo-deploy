@@ -58,7 +58,7 @@ module "portal" {
   #Vidispine
   vidi_availability_zones = ["us-east-1a", "us-east-1b"]
   vidi_cluster_identifier = "envoi-vididb"
-  vidi_database_name = "envoi-vididb"
+  vidi_database_name = "vididb"
   vidi_elasticsearch_automated_snapshot_start_hour = "23"
   vidi_elasticsearch_domain_name = "envoi-vidispine"
   vidi_elasticsearch_ebs_enabled = true
@@ -78,5 +78,6 @@ module "portal" {
   vidi_broker_instance_type = "mq.t2.micro"
   vidi_broker_username = "${var.vidi_broker_username}"
   vidi_broker_password = "${var.vidi_broker_password}"
+  vidi_broker_subnet_ids = ["${var.private_subnet_1}"]
 }
 

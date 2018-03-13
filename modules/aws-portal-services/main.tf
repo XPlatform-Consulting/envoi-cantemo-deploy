@@ -123,4 +123,5 @@ module "aws-vidispine-services" {
   vidi_broker_instance_type = "${var.vidi_broker_instance_type}"
   vidi_broker_username = "${var.vidi_broker_username}"
   vidi_broker_password = "${var.vidi_broker_password}"
+  vidi_broker_subnet_ids = ["${var.vidi_broker_subnet_ids}"]
 }

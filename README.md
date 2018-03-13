@@ -17,4 +17,5 @@ Used to start all the necessary services to run Cantemo portal on AWS.
   1. `terraform init` Initialize terraform
   2. Edit the main.tf file as needed to meet configuration requirements 
   3. `terraform plan` Review planed changes to AWS environment
-  4. `terrafomr apply` If the changes are acceptable apply the changes to the AWS environment
+  4. `terrafomr apply` If the changes are acceptable apply the changes to the AWS environment. 
+  WARNING: The apply process can take more than half an hour to complete due to amount of time it takes for RDS clusters and elasticsearch to come online.

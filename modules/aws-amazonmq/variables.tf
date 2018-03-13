@@ -1,0 +1,21 @@
+variable "broker_name" {
+
+}
+variable "broker_type" {
+
+}
+variable "broker_version" {
+
+}
+variable "broker_instace_type" {
+
+}
+variable "broker_security_groups" {
+
+}
+variable "broker_password" {
+
+}
+variable "broker_username" {
+
+}

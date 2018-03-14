@@ -100,7 +100,7 @@ module "aws-elasticsearch" {
 module "aws-vidispine-services" {
   source = "../aws-vidispine-services"
   vidi_availability_zones = ["${var.availability_zones}"]
-  vidi_cluster_identifier = "${var.cluster_identifier}"
+  vidi_cluster_identifier = "${var.vidi_cluster_identifier}"
   vidi_database_name = "${var.vidi_database_name}"
   vidi_elasticsearch_automated_snapshot_start_hour = "${var.vidi_elasticsearch_automated_snapshot_start_hour}"
   vidi_elasticsearch_domain_name = "${var.vidi_elasticsearch_domain_name}"
